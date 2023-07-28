@@ -3,14 +3,15 @@ package com.example.creditcardoptimizer.service;
 import com.example.creditcardoptimizer.models.CreditUsage;
 import com.example.creditcardoptimizer.models.PaymentTransaction;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+@Service
 public class PaymentAnalyzerService {
 
     public List<String> analyse(List<PaymentTransaction> transactions){
@@ -38,9 +39,9 @@ public class PaymentAnalyzerService {
 
     public String analyseCreditUsage(CreditUsage creditUsage){
         if(Objects.nonNull(creditUsage) && creditUsage.getUtilizeCreditPercentage().doubleValue()>= 30){
-            return "Credit usage exceed 30%";
+            return "Credit usage is " + creditUsage.getUtilizeCreditPercentage() + ". Please reduce it till to 30%";
         }
-         return StringUtils.EMPTY;
+        return "Credit usage is " + creditUsage.getUtilizeCreditPercentage() + "% which is good";
     }
 
 }

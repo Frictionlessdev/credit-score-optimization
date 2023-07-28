@@ -13,7 +13,6 @@ public class CreditAccountAgeMock implements Mock<CreditAccount> {
     public CreditAccount generate() {
         Faker faker = new Faker();
         LocalDate date = LocalDate.of(faker.random().nextInt(2000,2020),faker.random().nextInt(1,12),faker.random().nextInt(1,31 ));
-        CreditAccount creditAccount = new CreditAccount(date);
-        return creditAccount;
+        return new CreditAccount(date);
     }
 }
