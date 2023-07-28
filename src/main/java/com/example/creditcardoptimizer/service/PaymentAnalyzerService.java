@@ -1,8 +1,10 @@
 package com.example.creditcardoptimizer.service;
 
+import com.example.creditcardoptimizer.models.CreditUsage;
 import com.example.creditcardoptimizer.models.PaymentTransaction;
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -32,6 +34,13 @@ public class PaymentAnalyzerService {
 
     private String generateMessage(PaymentTransaction transaction) {
         return "Transaction done on " + transaction.getPaymentDate() + " with payment id " + transaction.getPaymentId();
+    }
+
+    private String analyseCreditUsage(CreditUsage creditUsage){
+        if(Objects.nonNull(creditUsage) && creditUsage.getUtilizeCreditPrecentage().doubleValue()>= 30){
+            return "Credit usage exceed 30%";
+        }
+         return StringUtils.EMPTY;
     }
 
 }

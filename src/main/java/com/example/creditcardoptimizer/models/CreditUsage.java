@@ -13,5 +13,5 @@ public class CreditUsage {
     private BigDecimal totalCreditLimit;
     private BigDecimal utilize;
     private BigDecimal remainingCreditBalance;
-    private BigDecimal utilizeCreditPrecentage;
+    private BigDecimal utilizeCreditPercentage;
 }

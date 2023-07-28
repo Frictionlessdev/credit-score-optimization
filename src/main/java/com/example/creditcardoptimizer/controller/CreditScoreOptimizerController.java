@@ -37,7 +37,7 @@ public class CreditScoreOptimizerController {
     }
 
     @GetMapping("credit-usage/{account-id}")
-    public ResponseEntity<CreditUsageResponse> creditUsagePercentage(@PathVariable String accountId){
+    public ResponseEntity<CreditUsageResponse> creditUsagePercentage(@PathVariable(name =  "account-id") String accountId){
        return ResponseEntity.ok(creditUsageService.getCreditUsageResponse(accountId));
      }
 }
