@@ -22,7 +22,7 @@ public class MockCreditUsageService implements CreditUsageService{
     public CreditUsageResponse getCreditUsageResponse(String accountId) {
         CreditUsage creditUsage = creditUsageMock.generate();
       return CreditUsageResponse.builder()
-                .creditUsagePercentage(creditUsage.getUtilizeCreditPrecentage())
+                .creditUsagePercentage(creditUsage.getUtilizeCreditPercentage())
               .build();
     }
 }
