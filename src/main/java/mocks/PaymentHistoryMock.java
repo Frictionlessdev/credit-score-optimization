@@ -1,17 +1,17 @@
 package mocks;
 
 import com.github.javafaker.Faker;
-import models.Payment;
+import models.PaymentTransaction;
 
 import java.util.concurrent.TimeUnit;
 
-public class PaymentHistoryMock implements Mock{
+public class PaymentHistoryMock implements Mock<PaymentTransaction> {
 
 
     @Override
-    public Object generate() {
+    public PaymentTransaction generate() {
         Faker faker = new Faker();
-        Payment payment = new Payment();
+        PaymentTransaction payment = new PaymentTransaction();
 
         payment.setPaymentId(faker.number().digits(8));
         payment.setPaymentDate(faker.date().past(30, TimeUnit.DAYS).toString()); // Get a date from the last 30 days
