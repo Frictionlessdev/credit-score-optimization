@@ -16,6 +16,7 @@ public class PaymentHistoryMock implements Mock<PaymentTransaction> {
         payment.setPaymentDate(faker.date().past(30, TimeUnit.DAYS).toString()); // Get a date from the last 30 days
         payment.setAmount(faker.number().randomDouble(2, 10, 1000));
         payment.setPaymentMethod(faker.options().option("Credit Card", "PayPal", "Bank Transfer"));
+        payment.setPaymentDescription(faker.options().option("On-time","Late payment", "late fees"));
 
         return payment;
     }

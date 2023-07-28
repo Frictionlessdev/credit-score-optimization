@@ -15,4 +15,5 @@ public class PaymentTransaction {
     private String paymentDate;
     private double amount;
     private String paymentMethod;
+    private String paymentDescription;
 }
