@@ -1,8 +1,7 @@
 package com.example.creditcardoptimizer.mocks;
 
+import com.example.creditcardoptimizer.models.PaymentTransaction;
 import com.github.javafaker.Faker;
-import models.PaymentTransaction;
-
 import java.util.concurrent.TimeUnit;
 
 public class PaymentHistoryMock implements Mock<PaymentTransaction> {

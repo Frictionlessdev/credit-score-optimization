@@ -1,6 +1,6 @@
 package com.example.creditcardoptimizer.service;
 
-import models.PaymentHistoryResponse;
+import com.example.creditcardoptimizer.models.PaymentHistoryResponse;
 
 public interface PaymentHistoryService {
     PaymentHistoryResponse getPaymentHistory(String uniqueId);

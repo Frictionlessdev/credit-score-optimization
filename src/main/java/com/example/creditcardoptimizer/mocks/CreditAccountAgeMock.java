@@ -1,10 +1,9 @@
 package com.example.creditcardoptimizer.mocks;
 
+import com.example.creditcardoptimizer.models.CreditAccount;
 import com.github.javafaker.Faker;
-import models.CreditAccount;
-
 import java.time.LocalDate;
-import java.util.concurrent.TimeUnit;
+
 
 public class CreditAccountAgeMock implements Mock<CreditAccount> {
 

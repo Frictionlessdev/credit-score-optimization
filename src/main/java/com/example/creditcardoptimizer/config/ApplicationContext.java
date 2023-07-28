@@ -1,12 +1,11 @@
 package com.example.creditcardoptimizer.config;
 
-import mocks.Mock;
-import mocks.PaymentHistoryMock;
+import com.example.creditcardoptimizer.mocks.Mock;
+import com.example.creditcardoptimizer.mocks.PaymentHistoryMock;
+import com.example.creditcardoptimizer.service.MockPaymentHistoryService;
+import com.example.creditcardoptimizer.service.PaymentHistoryService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableMBeanExport;
-import service.MockPaymentHistoryService;
-import service.PaymentHistoryService;
 
 @Configuration
 public class ApplicationContext {

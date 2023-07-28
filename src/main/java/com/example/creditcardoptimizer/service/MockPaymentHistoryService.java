@@ -1,7 +1,7 @@
 package com.example.creditcardoptimizer.service;
 
-import mocks.PaymentHistoryMock;
-import models.PaymentHistoryResponse;
+import com.example.creditcardoptimizer.mocks.PaymentHistoryMock;
+import com.example.creditcardoptimizer.models.PaymentHistoryResponse;
 
 public class MockPaymentHistoryService implements PaymentHistoryService{
     private PaymentHistoryMock paymentHistoryMock;
