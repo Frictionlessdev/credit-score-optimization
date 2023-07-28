@@ -36,8 +36,8 @@ public class PaymentAnalyzerService {
         return "Transaction done on " + transaction.getPaymentDate() + " with payment id " + transaction.getPaymentId();
     }
 
-    private String analyseCreditUsage(CreditUsage creditUsage){
-        if(Objects.nonNull(creditUsage) && creditUsage.getUtilizeCreditPrecentage().doubleValue()>= 30){
+    public String analyseCreditUsage(CreditUsage creditUsage){
+        if(Objects.nonNull(creditUsage) && creditUsage.getUtilizeCreditPercentage().doubleValue()>= 30){
             return "Credit usage exceed 30%";
         }
          return StringUtils.EMPTY;
