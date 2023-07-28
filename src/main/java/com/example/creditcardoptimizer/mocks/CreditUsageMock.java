@@ -3,9 +3,10 @@ package com.example.creditcardoptimizer.mocks;
 import com.example.creditcardoptimizer.models.CreditAccount;
 import com.example.creditcardoptimizer.models.CreditUsage;
 import com.github.javafaker.Faker;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-
+@Component
 public class CreditUsageMock implements Mock<CreditUsage> {
 
 

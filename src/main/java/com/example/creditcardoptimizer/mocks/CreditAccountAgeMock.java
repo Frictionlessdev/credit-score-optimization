@@ -2,9 +2,11 @@ package com.example.creditcardoptimizer.mocks;
 
 import com.example.creditcardoptimizer.models.CreditAccount;
 import com.github.javafaker.Faker;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDate;
 
-
+@Component
 public class CreditAccountAgeMock implements Mock<CreditAccount> {
 
     @Override
